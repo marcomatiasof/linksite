@@ -341,9 +341,10 @@ nav a:not(.btn-primary):hover {
 
 /* Footer */
 footer {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid #222;
     padding: 4rem 0 2rem;
-    background: var(--bg-secondary);
+    background: #0A0A0A;
+    color: #FFFFFF;
 }
 
 .footer-content {
@@ -354,8 +355,12 @@ footer {
     gap: 2rem;
 }
 
+.footer-brand .logo-text {
+    color: #FFFFFF;
+}
+
 .footer-brand p {
-    color: var(--text-muted);
+    color: #A0AEC0;
     max-width: 300px;
     margin-top: 1rem;
 }
@@ -365,18 +370,18 @@ footer {
     font-family: 'Outfit', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: var(--text-main);
+    color: #FFFFFF;
 }
 .footer-links p {
-    color: var(--text-muted);
+    color: #A0AEC0;
     margin-bottom: 0.5rem;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
+    border-top: 1px solid #222;
+    color: #A0AEC0;
     font-size: 0.9rem;
 }
 
