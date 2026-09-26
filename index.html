@@ -44,7 +44,7 @@
                 <a href="#recursos">Recursos</a>
                 <a href="#dispositivos">Dispositivos</a>
                 <a href="#planos">Planos</a>
-                <a href="https://wa.me/5534999929764?text=Olá, quero meu teste IPTV de 3 horas da TVLINK!" target="_blank" class="btn-primary">▶ Teste Grátis 3H</a>
+                <a href="javascript:void(0)" onclick="openModal('Olá, quero meu teste IPTV de 3 horas da TVLINK!')" class="btn-primary">▶ Teste Grátis 3H</a>
             </nav>
         </div>
     </header>
@@ -58,7 +58,7 @@
                     <p>Pare de pagar fortunas para operadoras tradicionais ou sofrer com links piratas que travam na hora do jogo. Conheça o único sistema com <strong>Tecnologia Smart-Stream™</strong> que garante +18.000 canais e +50.000 filmes rodando lisos, sem delay e sem contratos abusivos.</p>
                     
                     <div class="hero-btns">
-                        <a href="https://wa.me/5534999929764?text=Olá, quero meu teste IPTV de 3 horas da TVLINK!" target="_blank" class="btn-large btn-whatsapp">
+                        <a href="javascript:void(0)" onclick="openModal('Olá, quero meu teste IPTV de 3 horas da TVLINK!')" class="btn-large btn-whatsapp">
                             <span class="icon">💬</span> Solicitar Teste de 3 Horas
                         </a>
                         <a href="#planos" class="btn-outline">Ver Planos</a>
@@ -133,7 +133,7 @@
                             <li>Guia de Programação (EPG)</li>
                             <li>Suporte Premium</li>
                         </ul>
-                        <a href="https://wa.me/5534999929764?text=Olá, quero assinar o plano Mensal de R$ 29,90!" target="_blank" class="btn-primary btn-full">Assinar Agora</a>
+                        <a href="javascript:void(0)" onclick="openModal('Olá, quero assinar o plano Mensal de R$ 29,90!')" class="btn-primary btn-full">Assinar Agora</a>
                     </div>
 
                     <!-- Trimestral -->
@@ -152,7 +152,7 @@
                             <li>Não se preocupe com renovação mensal</li>
                             <li>Suporte Prioritário VIP</li>
                         </ul>
-                        <a href="https://wa.me/5534999929764?text=Olá, quero assinar o plano Trimestral com 10% de desconto!" target="_blank" class="btn-primary btn-full">Assinar Agora</a>
+                        <a href="javascript:void(0)" onclick="openModal('Olá, quero assinar o plano Trimestral com 10% de desconto!')" class="btn-primary btn-full">Assinar Agora</a>
                     </div>
 
                     <!-- Semestral -->
@@ -170,7 +170,7 @@
                             <li>Maior Estabilidade Comprovada</li>
                             <li>Servidor Anti-Bloqueio (Smart-Stream)</li>
                         </ul>
-                        <a href="https://wa.me/5534999929764?text=Olá, quero assinar o plano Semestral com 15% de desconto!" target="_blank" class="btn-outline btn-full">Assinar Agora</a>
+                        <a href="javascript:void(0)" onclick="openModal('Olá, quero assinar o plano Semestral com 15% de desconto!')" class="btn-outline btn-full">Assinar Agora</a>
                     </div>
 
                     <!-- Anual -->
@@ -188,7 +188,7 @@
                             <li>O Melhor Custo-Benefício</li>
                             <li>Acesso ininterrupto por 365 dias</li>
                         </ul>
-                        <a href="https://wa.me/5534999929764?text=Olá, quero assinar o plano Anual com 20% de desconto!" target="_blank" class="btn-outline btn-full">Assinar Agora</a>
+                        <a href="javascript:void(0)" onclick="openModal('Olá, quero assinar o plano Anual com 20% de desconto!')" class="btn-outline btn-full">Assinar Agora</a>
                     </div>
                 </div>
             </div>
@@ -336,7 +336,7 @@
                 <div class="cta-box glass">
                     <h2>O Segredo Que as Operadoras Escondem de Você</h2>
                     <p>Não acredite apenas na nossa palavra. Teste a Tecnologia Smart-Stream™ por 3 horas totalmente de graça e comprove você mesmo a diferença (sem precisar cadastrar nenhum cartão).</p>
-                    <a href="https://wa.me/5534999929764?text=Olá, quero meu teste IPTV de 3 horas da TVLINK!" target="_blank" class="btn-large btn-whatsapp">
+                    <a href="javascript:void(0)" onclick="openModal('Olá, quero meu teste IPTV de 3 horas da TVLINK!')" class="btn-large btn-whatsapp">
                         Solicitar via WhatsApp
                     </a>
                 </div>
@@ -367,5 +367,57 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Formulário Lead -->
+    <div id="leadModal" class="modal-overlay">
+        <div class="modal-box glass">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <h2>Quase lá! 🚀</h2>
+            <p>Preencha os dados abaixo para continuarmos o atendimento.</p>
+            
+            <form id="leadForm" onsubmit="submitForm(event)">
+                <div class="input-group">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+                <div class="input-group">
+                    <label for="email">Seu Melhor E-mail</label>
+                    <input type="email" id="email" required placeholder="email@exemplo.com">
+                </div>
+                <div class="input-group">
+                    <label for="whatsapp">Seu WhatsApp</label>
+                    <input type="tel" id="whatsapp" required placeholder="(11) 99999-9999" pattern="[\d\s\-\(\)]+">
+                </div>
+                <button type="submit" class="btn-primary btn-full" style="margin-top: 1rem;">Confirmar e Liberar Acesso</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentWhatsappMsg = "";
+        
+        function openModal(msg) {
+            currentWhatsappMsg = msg || "Olá! Acabei de me cadastrar no site.";
+            document.getElementById('leadModal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('leadModal').style.display = 'none';
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const zap = document.getElementById('whatsapp').value;
+            
+            const texto = `${currentWhatsappMsg}%0A%0A*-- Meus Dados --*%0ANome: ${nome}%0AE-mail: ${email}%0AWhatsApp: ${zap}`;
+            const url = `https://wa.me/5534999929764?text=${texto}`;
+            
+            window.open(url, '_blank');
+            closeModal();
+            document.getElementById('leadForm').reset();
+        }
+    </script>
 </body>
 </html>
