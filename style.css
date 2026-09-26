@@ -44,16 +44,34 @@ a {
 
 /* Announce Bar */
 .announce {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--primary-hover));
     color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: default;
 }
-.announce a {
-    text-decoration: underline;
-    font-weight: 700;
+
+.marquee {
+    display: inline-flex;
+    animation: marquee 30s linear infinite;
+    gap: 4rem;
+}
+
+.marquee span {
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 2rem)); }
+}
+
+.announce:hover .marquee {
+    animation-play-state: paused;
 }
 
 /* Header */
