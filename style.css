@@ -476,6 +476,59 @@ code {
     top: 2px;
 }
 
+/* FAQ Section */
+.faq-section {
+    padding: 5rem 0;
+    background: var(--bg-secondary);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+details {
+    padding: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+summary {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    outline: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 400;
+}
+
+details[open] summary::after {
+    content: '-';
+}
+
+details p {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 /* Plans Section */
 .plans-section {
     padding: 5rem 0;
