@@ -1,14 +1,14 @@
 :root {
     --bg-color: #FFFFFF;
-    --bg-secondary: #F8F9FA;
-    --primary: #0052FF;
-    --primary-hover: #0043D1;
-    --accent: #8A2BE2;
+    --bg-secondary: #FFF8F8;
+    --primary: #E50914;
+    --primary-hover: #B20710;
+    --accent: #FF3B30;
     --text-main: #1A1A24;
     --text-muted: #6B6B7B;
-    --border: rgba(0, 0, 0, 0.08);
+    --border: rgba(229, 9, 20, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.85);
-    --glass-border: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(229, 9, 20, 0.05);
 }
 
 * {
@@ -421,7 +421,7 @@ footer {
 }
 
 code {
-    background: rgba(0, 82, 255, 0.1);
+    background: rgba(229, 9, 20, 0.1);
     color: var(--primary);
     padding: 2px 6px;
     border-radius: 4px;
@@ -561,7 +561,7 @@ details p {
     background: var(--bg-secondary);
     border-color: var(--primary);
     transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 82, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(229, 9, 20, 0.15);
     z-index: 2;
 }
 
@@ -668,8 +668,8 @@ details p {
     padding: 3rem 2rem;
     text-align: center;
     border: 2px solid var(--primary);
-    background: linear-gradient(145deg, #FFFFFF 0%, #F0F8FF 100%);
-    box-shadow: 0 15px 40px rgba(0, 82, 255, 0.1);
+    background: linear-gradient(145deg, #FFFFFF 0%, #FFF5F5 100%);
+    box-shadow: 0 15px 40px rgba(229, 9, 20, 0.1);
 }
 
 .payment-box h2 {
